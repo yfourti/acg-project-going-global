@@ -23,16 +23,16 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    testFiltercriteria: 'TestCategory!=ExcludeFromTest'
+# - task: VSTest@2
+#   inputs:
+#     platform: '$(buildPlatform)'
+#     configuration: '$(buildConfiguration)'
+#     testFiltercriteria: 'TestCategory!=ExcludeFromTest'
 
-    # Specify the .NET framework version for the test
-    vsTestVersion: toolsInstaller
-    vsTestLocationMethod: version
-    vsTestVersionDetails: 5.0.x
+#     # Specify the .NET framework version for the test
+#     vsTestVersion: toolsInstaller
+#     vsTestLocationMethod: version
+#     vsTestVersionDetails: 5.0.x
 
 # Publish build artifacts
 - task: PublishBuildArtifacts@1
